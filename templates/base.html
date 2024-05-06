@@ -530,20 +530,31 @@
             </li>
 
 
+            
+
+
+
+            <li class="menu-label"></li>
+
             <li>
-              <a href="{% url 'cal:appointments' %}" class="has-arrow">
-                <div class="parent-icon">
+              <a href="{% url 'telehealth:telehealth' %}">
+                <div class="parent-icon"><i class="fadeIn animated bx bx-chevron-right-circle"></i>
+                </div>
+                <div class="menu-title">Telehealth</div>
+              </a>
+            </li>
+            
+
+            <li>
+              <a href="{% url 'cal:appointments' %}">
+                <div class="parent-icon"><i class="bi bi-bookmark-heart-fill"></i>
                 </div>
                 <div class="menu-title">Appointments Calendar</div>
               </a>
             </li>
-
-
-
-            <li class="menu-label">Telehealth</li>
             <li>
               <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
+                <div class="parent-icon"><i class="bi bi-people-fill"></i>
                 </div>
                 <div class="menu-title">My Clients</div>
               </a>
@@ -554,6 +565,29 @@
                 </li>
               </ul>
             </li>
+
+
+            <li>
+              <a href="{% url 'tasks:tasks' %}">
+                <div class="parent-icon"><i class="bi bi-question-lg"></i>
+                </div>
+                <div class="menu-title">My Tasks</div>
+              </a>
+            </li>
+
+            <li>
+              <a href="{% url 'billing:billing' %}">
+                <div class="parent-icon"><i class="bi bi-bell-fill"></i>
+                </div>
+                <div class="menu-title">Billing & Payments</div>
+              </a>
+            </li>
+
+
+
+
+
+            
 
             
             <li>

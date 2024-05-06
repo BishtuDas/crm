@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'appointments',
     'business',
     'clients',
+    'tasks',
+    'telehealth',
+    'billing',
    
 ]
 

@@ -14,6 +14,12 @@ urlpatterns = [
     path('', include('business.urls')),
     path('', include('appointments.urls')),
     path('', include('clients.urls')),
+    path('', include('tasks.urls')),
+    path('', include('telehealth.urls')),
+    path('', include('billing.urls')),
+
+
+    
 
    
     
