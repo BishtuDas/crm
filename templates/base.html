@@ -514,15 +514,15 @@
                 <div class="menu-title">My Business </div>
               </a>
               <ul>
-                <li> <a href="{% url 'business:companyprofile' %}"><i class="bi bi-circle"></i>Company Profile</a>
+                <li> <a href="{% url 'business:company_profile' %}"><i class="bi bi-circle"></i>Company Profile</a>
                 </li>
-                <li> <a href="app-chat-box.html"><i class="bi bi-circle"></i>Doctor Profile</a>
+                <li> <a href="{% url 'business:doctor_profile' %}"><i class="bi bi-circle"></i>Doctor Profile</a>
                 </li>
-                <li> <a href="app-file-manager.html"><i class="bi bi-circle"></i>My Team</a>
+                <li> <a href="{% url 'business:my_team' %}"><i class="bi bi-circle"></i>My Team</a>
                 </li>
-                <li> <a href="app-to-do.html"><i class="bi bi-circle"></i>My Locations</a>
+                <li> <a href="{% url 'business:my_locations' %}"><i class="bi bi-circle"></i>My Locations</a>
                 </li>
-                <li> <a href="app-invoice.html"><i class="bi bi-circle"></i>Reports</a>
+                <li> <a href="{% url 'business:reports' %}"><i class="bi bi-circle"></i>Reports</a>
                 </li>
                 <li> <a href="app-fullcalender.html"><i class="bi bi-circle"></i>Opportunities</a>
                 </li>
