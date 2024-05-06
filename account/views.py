@@ -91,11 +91,9 @@ def signup (request):
 
     return render(request, 'signup.html', context)
 
-
-
-    
-
-
+def byebye(request):
+    logout(request)
+    return redirect ('dashboard:dashboard')
 
 
 

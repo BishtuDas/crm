@@ -143,7 +143,7 @@
                       </a>
                     </div>
                     <div class="col">
-                      <a href="pages-user-profile.html">
+                      <a href="{% url 'dashboard:userprofile' %}">
                       <div class="apps p-2 radius-10 text-center">
                          <div class="apps-icon-box mb-1 text-white bg-gradient-warning">
                           <i class="bi bi-person-circle"></i>
@@ -431,7 +431,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                    <li>
-                      <a class="dropdown-item" href="pages-user-profile.html">
+                      <a class="dropdown-item" href="{% url 'dashboard:userprofile' %}">
                          <div class="d-flex align-items-center">
                            <div class=""><i class="bi bi-person-fill"></i></div>
                            <div class="ms-3"><span>Profile</span></div>
@@ -447,7 +447,7 @@
                        </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="index2.html">
+                      <a class="dropdown-item" href="{% url 'dashboard:dashboard' %}">
                          <div class="d-flex align-items-center">
                            <div class=""><i class="bi bi-speedometer"></i></div>
                            <div class="ms-3"><span>Dashboard</span></div>
@@ -471,14 +471,25 @@
                        </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
+                    {% if user.is_authenticated %}
                     <li>
-                      <a class="dropdown-item" href="authentication-signup-with-header-footer.html">
+                      <a class="dropdown-item" href="{% url 'account:byebye' %}">
                          <div class="d-flex align-items-center">
                            <div class=""><i class="bi bi-lock-fill"></i></div>
-                           <div class="ms-3"><span>Logout</span></div>
+                           <div class="ms-3"><span>Log out</span></div>
                          </div>
                        </a>
                     </li>
+                    {% else %}
+                    <li>
+                      <a class="dropdown-item" href="{% url 'account:signin' %}">
+                         <div class="d-flex align-items-center">
+                           <div class=""><i class="bi bi-box-arrow-in-right"></i></div>
+                           <div class="ms-3"><span>Log in</span></div>
+                         </div>
+                       </a>
+                    </li>
+                    {% endif %}
                 </ul>
               </div>
         </nav>
@@ -712,7 +723,7 @@
               </ul>
             </li>
             <li>
-              <a href="pages-faq.html">
+              <a href="{% url 'home:faq' %}">
                 <div class="parent-icon"><i class="bi bi-question-lg"></i>
                 </div>
                 <div class="menu-title">FAQ</div>
