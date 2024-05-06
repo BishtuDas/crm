@@ -528,14 +528,34 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-label">UI Elements</li>
+
+
             <li>
               <a href="{% url 'cal:appointments' %}" class="has-arrow">
-                <div class="parent-icon"><i class="bi bi-droplet-fill"></i>
+                <div class="parent-icon">
                 </div>
-                <div class="menu-title">Widgets</div>
+                <div class="menu-title">Appointments Calendar</div>
               </a>
             </li>
+
+
+
+            <li class="menu-label">Telehealth</li>
+            <li>
+              <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
+                </div>
+                <div class="menu-title">My Clients</div>
+              </a>
+              <ul>
+                <li> <a href="{% url 'clients:clients_all' %}"><i class="bi bi-circle"></i>View All</a>
+                </li>
+                <li> <a href="{% url 'clients:add_clients' %}"><i class="bi bi-circle"></i>Add Client</a>
+                </li>
+              </ul>
+            </li>
+
+            
             <li>
               <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bi bi-basket2-fill"></i>
